@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="3dp">
+    android:padding="3dp"
+    >
 
     <EditText
         android:id="@+id/input_nombre"
@@ -46,7 +47,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/texto_estado_civil"
         android:layout_toLeftOf="@+id/spinner_cargo"
-        android:entries="@array/lista_estado_civil" />
+
+        />
 
     <TextView
         android:id="@+id/texto_cargo"
@@ -68,6 +70,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/texto_cargo"
         android:layout_below="@+id/texto_cargo"
-        android:entries="@array/lista_cargo" />
+
+    />
 
 </RelativeLayout>

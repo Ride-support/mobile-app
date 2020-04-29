@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registre el nuevo servicio que desea ofrecer su empresa"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#7EA197"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        />
+
+    <EditText android:id="@+id/txtCompanyName"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Nombre del establecimiento comercial"
+        android:layout_marginTop="5dp"
+        android:inputType="text" />
+
+    <EditText android:id="@+id/txtCompanyLocation"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Direccion"
+        android:inputType="textEmailAddress" />
+
+    <EditText android:id="@+id/txtSheduleService"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Horario de atención"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/txtPricesService"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dip"
+        android:layout_marginTop="5dp"
+        android:hint="Precios"
+        android:inputType="textPassword" />
+
+
+    <TextView
+        android:id="@+id/texto_TypeService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_apellido"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/texto_estado_civil"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp"
+        android:text="Seleccione el tipo de servicio"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinner_cargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/texto_cargo"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/texto_cargo"
+        android:layout_below="@+id/texto_cargo"
+       />
+
+
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="385dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:background="#D61C38"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="registrar" />
+
+
+</LinearLayout>
