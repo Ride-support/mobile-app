@@ -2,19 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#0E091E"
+    >
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Registrarse"
         android:id="@+id/boton_login"
+        android:background= "#CF3232"
+        android:textSize="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:layout_gravity="center_horizontal|bottom"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Iniciar sesión"
         android:id="@+id/boton_register"
+        android:background= "#75C33E"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="24dp"
         />
 
     <ImageView
