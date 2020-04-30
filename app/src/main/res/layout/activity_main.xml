@@ -1,9 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0E091E"
     >
+
+    <ImageView
+        android:id="@+id/logoBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo_ridesupport"
+    />
+
+
 
     <Button
         android:layout_width="match_parent"
@@ -21,17 +31,9 @@
         android:id="@+id/boton_register"
         android:background= "#75C33E"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textSize="24dp"
-        />
-
-    <ImageView
-        android:id="@+id/imagen_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="top|center"
+        android:textSize="24dp"/>
 
 
-        android:src="@drawable/logo_ridesupport" />
 
 
 </FrameLayout>
