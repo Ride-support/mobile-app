@@ -83,7 +83,8 @@
         android:background="#D61C38"
         android:paddingLeft="15dip"
         android:paddingRight="15dip"
-        android:text="registrar" />
+        android:text="registrar"
+        />
 
 
 </LinearLayout>
