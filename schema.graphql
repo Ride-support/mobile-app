@@ -1,0 +1,276 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Car {
+    brand: String!
+    model: String!
+    plateNumber: String!
+}
+
+type Cardinal {
+    _id: String!
+    latitude: Float!
+    longitude: Float!
+}
+
+type Company {
+    address: String!
+    city: String!
+    email: String!
+    id: Int!
+    manager: String!
+    name: String!
+    password: String!
+    phone: Int!
+}
+
+type Distance {
+    _id: String!
+    km: Float!
+}
+
+type Driver {
+    address: String!
+    age: Int!
+    email: String!
+    id: Int!
+    lastname: String!
+    name: String!
+    password: String!
+    phone: Int!
+    vehicle: String!
+}
+
+type Insertion {
+    InsertedID: String!
+}
+
+type Mutation {
+    createCar(car: CarInput!): Car!
+    createCardinal(cardinal: CardinalInput!): Insertion!
+    createCompany(company: CompanyInput!): Company!
+    createDriver(driver: DriverInput!): Driver!
+    createReserva(id: String!, reserva: ReservaInput!): Reserva!
+    createService(service: ServiceInputGS!): ServiceGS!
+    createServiceM(service: ServiceInput!): Response!
+    createServiceType(serviceType: ServiceTypeInput!): ServiceType!
+    createUser(user: UserInput!): User!
+    createVehicle(vehicle: VehicleInput!): Vehicle!
+    createVehicleType(vehicleType: VehicleTypeInput!): VehicleType!
+    deleteCar(plateNumber: String!): String
+    deleteCardinal(id: String!): String
+    deleteCompany(id: Int!): Int
+    deleteDriver(id: Int!): Int
+    deleteService(id: Int!): Int
+    deleteServiceM(id: Int!): String!
+    deleteServiceType(id: Int!): Int
+    deleteUser(id: String!): String
+    deleteVehicle(id: Int!): Int
+    deleteVehicleType(id: Int!): Int
+    loginCompany(company: CompanyLogin!): String!
+    loginDriver(driver: DriverLogin!): String!
+    updateCar(car: CarInput!, plateNumber: String!): Car!
+    updateCompany(company: CompanyInput!, id: Int!): Company!
+    updateDriver(driver: DriverInput!, id: Int!): Driver!
+    updateService(id: Int!, service: ServiceInputGS!): ServiceGS!
+    updateServiceM(service: ServiceInput!): Response!
+    updateServiceType(id: Int!, serviceType: ServiceTypeInput!): ServiceType!
+    updateUser(id: String!, user: UserInput!): User!
+    updateVehicle(id: Int!, vehicle: VehicleInput!): Vehicle!
+    updateVehicleType(id: Int!, vehicleType: VehicleTypeInput!): VehicleType!
+}
+
+type Query {
+    allCars: [Car]!
+    allCompanys: [Company]!
+    allCoordinates: [Cardinal]!
+    allDrivers: [Driver]!
+    allServiceTypes: [ServiceType]!
+    allServices: [ServiceGS]!
+    allServicesM: [ServiceR]!
+    allUsers: [User]
+    allVehicleTypes: [VehicleType]!
+    allVehicles: [Vehicle]!
+    carByPlates(plateNumber: String!): Car!
+    companyById(id: Int!): Company!
+    coordinateById(_id: String!): Cardinal!
+    driverById(id: Int!): Driver!
+    obtainDistance(lat: Float!, lon: Float!): [Distance]!
+    ping: String!
+    reservaById(id: String!): [Reserva]!
+    serviceById(id: Int!): ServiceGS!
+    serviceByIdM(id: Int!): ServiceR!
+    serviceByType(id: Int!): [ServiceGS]!
+    serviceByVehicle(id: Int!): [ServiceGS]!
+    serviceTypeById(id: Int!): ServiceType!
+    userById(id: String!): User!
+    vehicleById(id: Int!): Vehicle!
+    vehicleByType(id: Int!): [Vehicle]!
+    vehicleTypeById(id: Int!): VehicleType!
+}
+
+type Reserva {
+    _id: String!
+    fechaServicio: String!
+    horaServicio: String!
+    lugarServicio: String!
+    tipoServicio: String!
+}
+
+type Response {
+    Mensaje: String
+}
+
+type Service {
+    company_id: Int!
+    company_location: String!
+    company_name: String!
+    prices_service: String!
+    shedule_service: String!
+    type_service: String!
+}
+
+type ServiceGS {
+    ServiceType_id: Int!
+    VehicleType_id: Int!
+    closingTime: String!
+    cost: String!
+    description: String!
+    id: Int!
+    location: String!
+    openingTime: String!
+}
+
+type ServiceR {
+    Idcompany: String
+    Location: String
+    Name: String
+    Prices: String
+    Service: String
+    Shedule: String
+}
+
+type ServiceType {
+    id: Int!
+    name: String!
+}
+
+type User {
+    _id: String!
+    nombre: String!
+    reserva: [Reserva]!
+    telefono: String!
+}
+
+type Vehicle {
+    VehicleType_id: Int!
+    brand: String!
+    id: Int!
+    mainColor: String!
+    model: String!
+    plate: String!
+    secondaryColor: String!
+}
+
+type VehicleType {
+    id: Int!
+    name: String!
+}
+
+input CarInput {
+    brand: String!
+    model: String!
+    plateNumber: String!
+}
+
+input CardinalInput {
+    latitude: Float!
+    longitude: Float!
+}
+
+input CompanyInput {
+    address: String!
+    city: String!
+    email: String!
+    manager: String!
+    name: String!
+    password: String!
+    phone: Int!
+}
+
+input CompanyLogin {
+    email: String!
+    password: String!
+}
+
+input DriverInput {
+    address: String!
+    age: Int!
+    email: String!
+    lastname: String!
+    name: String!
+    password: String!
+    phone: Int!
+    vehicle: String!
+}
+
+input DriverLogin {
+    email: String!
+    password: String!
+}
+
+input ReservaInput {
+    fechaServicio: String!
+    horaServicio: String!
+    lugarServicio: String!
+    tipoServicio: String!
+}
+
+input ServiceInput {
+    company_id: Int!
+    company_location: String!
+    company_name: String!
+    prices_service: String!
+    shedule_service: String!
+    type_service: String!
+}
+
+input ServiceInputGS {
+    ServiceType_id: Int!
+    VehicleType_id: Int!
+    closingTime: String!
+    cost: String!
+    description: String!
+    location: String!
+    openingTime: String!
+}
+
+input ServiceTypeInput {
+    name: String!
+}
+
+input UserInput {
+    nombre: String!
+    telefono: String!
+}
+
+input VehicleInput {
+    VehicleType_id: Int!
+    brand: String!
+    mainColor: String!
+    model: String!
+    plate: String!
+    secondaryColor: String!
+}
+
+input VehicleTypeInput {
+    name: String!
+}
+
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
