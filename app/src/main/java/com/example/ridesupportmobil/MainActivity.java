@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.delete_service);
+        setContentView(R.layout.register_service);
 
 
-        deleteServicesM();
+        //deleteServicesM();
 
-        //createServicesM();
+        createServicesM();
 
     }
 
@@ -66,6 +66,50 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
+    private void createServicesM(){
+
+        Button btnRegistrar= (Button) findViewById(R.id.btnRegister);
+        btnRegistrar.setOnClickListener((view) -> {
+
+
+            String Service_id = ((EditText) findViewById(R.id.txtCompanyId)).getText().toString();
+            int ids = Integer.parseInt(Service_id);
+            String Service_shedule = ((EditText) findViewById(R.id.txtSheduleService)).getText().toString();
+            String Service_name = ((EditText) findViewById(R.id.txtCompanyName)).getText().toString();
+            String Service_type = ((EditText) findViewById(R.id.txtTypeService)).getText().toString();
+            String Service_prices = ((EditText) findViewById(R.id.txtPricesService)).getText().toString();
+            String Service_location = ((EditText) findViewById(R.id.txtCompanyLocation)).getText().toString();
+
+
+            port.setupApollo().mutate(
+                    RegisterServiceMutation
+                            .builder()
+                            .company_id(ids)
+                            .company_name(Service_name)
+                            .company_location(Service_location)
+                            .type_service(Service_type)
+                            .prices_service(Service_prices)
+                            .shedule_service(Service_shedule)
+                            .build())
+                    .enqueue(new ApolloCall.Callback<RegisterServiceMutation.Data>() {
+
+                        @Override
+                        public void onResponse(@NotNull Response<RegisterServiceMutation.Data> response) {
+
+                            Log.d(TAG, "Response: " + response.data().toString());
+
+                        }
+
+                        @Override
+                        public void onFailure(@NotNull ApolloException e) {
+
+                            Log.d(TAG, "Exception " + e.getMessage(), e);
+                        }
+                    });
+        });
+    }
 
 }
 
