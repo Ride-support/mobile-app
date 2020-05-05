@@ -1,7 +1,11 @@
 query GetAllServices{
     allServicesM{
         Name
-        Location
+        Idcompany
         Service
+        Location
+        Prices
+        Shedule
+
         }
 }

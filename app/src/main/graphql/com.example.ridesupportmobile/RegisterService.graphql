@@ -1,0 +1,13 @@
+mutation RegisterService($company_id:Int!,$company_location:String!,$company_name:String!,$type_service:String!, $prices_service:String!,$shedule_service:String!){
+    createServiceM(service:{
+        company_id: $company_id
+        type_service: $type_service
+        company_name: $company_name
+        company_location: $company_location
+        prices_service: $prices_service
+        shedule_service: $shedule_service
+    })
+    {
+        Mensaje
+    }
+}
