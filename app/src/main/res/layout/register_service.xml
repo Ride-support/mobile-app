@@ -53,8 +53,8 @@
         android:id="@+id/txtPricesService"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-                android:hint="Precios"
-        android:inputType="textPassword" />
+        android:hint="Precios"
+        />
 
     <EditText
         android:id="@+id/txtTypeService"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="30dip"
         android:layout_marginTop="5dp"
         android:hint="Tipo de servicio"
-        android:inputType="textPassword" />
+        />
 
 
     <!--
