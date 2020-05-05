@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools= "http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="20dip"
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity"
 
     >
 
@@ -22,6 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:hint="Nombre del establecimiento comercial"
+        android:layout_marginTop="5dp"
+        android:inputType="text" />
+    <EditText android:id="@+id/txtCompanyId"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Id del servicio"
         android:layout_marginTop="5dp"
         android:inputType="text" />
 
@@ -44,34 +53,42 @@
         android:id="@+id/txtPricesService"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+                android:hint="Precios"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txtTypeService"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="30dip"
         android:layout_marginTop="5dp"
-        android:hint="Precios"
+        android:hint="Tipo de servicio"
         android:inputType="textPassword" />
 
 
-    <TextView
-        android:id="@+id/texto_TypeService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/input_apellido"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@+id/texto_estado_civil"
-        android:paddingBottom="8dp"
-        android:paddingTop="16dp"
-        android:text="Seleccione el tipo de servicio"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <!--
+        <TextView
+            android:id="@+id/texto_TypeService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_apellido"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/texto_estado_civil"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp"
+            android:text="Seleccione el tipo de servicio"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Spinner
-        android:id="@+id/spinner_cargo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/texto_cargo"
-        android:layout_alignParentRight="true"
-        android:layout_alignStart="@+id/texto_cargo"
-        android:layout_below="@+id/texto_cargo"
-       />
-
+        <Spinner
+            android:id="@+id/spinner_cargo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/texto_cargo"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/texto_cargo"
+            android:layout_below="@+id/texto_cargo"
+           />
+    -->
 
 
     <Button
