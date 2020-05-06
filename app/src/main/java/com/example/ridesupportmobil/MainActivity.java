@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_ini = (Button) findViewById(R.id.boton_login);
+        btn_ini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RegisterCompany.class));
+            }
+        });
 
     }
 

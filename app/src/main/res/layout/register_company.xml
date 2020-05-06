@@ -90,69 +90,66 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/contrasena"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/ciudad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/direccion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText8"
+                    android:id="@+id/telefono"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText9"
+                    android:id="@+id/encargado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
+                <Button
+                    android:id="@+id/btnCom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#379C33"
+                    android:text="Registrar" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="155dp"
-            android:backgroundTint="#FFEB3B"
-            android:text="Guardar" />
-    </LinearLayout>
+
+
 
 </LinearLayout>
