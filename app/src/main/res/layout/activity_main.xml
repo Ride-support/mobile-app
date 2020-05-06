@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools= "http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#0E091E"
+    >
 
-    <TextView
-        android:id="@+id/espaciotxt"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/logoBackground"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=""
+        android:src="@drawable/logo_ridesupport"
         />
 
-</LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Registrarse"
+        android:id="@+id/boton_register"
+        android:background= "#CF3232"
+        android:textSize="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_gravity="center_horizontal|bottom"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Iniciar sesión"
+        android:id="@+id/boton_login"
+        android:background= "#75C33E"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="24dp"/>
+
+
+
+
+</FrameLayout>
 
