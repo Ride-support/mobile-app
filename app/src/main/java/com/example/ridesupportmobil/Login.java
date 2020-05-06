@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class LoginDriver extends AppCompatActivity {
 
     private static final String TAG = "LoginDriver";
+    private static final String TAG2 = "Company Selected";
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -29,8 +30,9 @@ public class LoginDriver extends AppCompatActivity {
         RadioButton companyLoginBtt = (RadioButton) findViewById(R.id.company_login);
         if (driverLoginBtt.isChecked()){
             loginDriver();
-        }else{
+        }else if(companyLoginBtt.isChecked()){
             loginCompany();
+            Log.d(TAG2,"eureka");
         }
 
 
