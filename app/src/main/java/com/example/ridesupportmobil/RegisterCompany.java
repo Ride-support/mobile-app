@@ -29,8 +29,6 @@ public class RegisterCompany extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_company);
 
-
-
         createCompany();
 
     }
@@ -69,12 +67,7 @@ public class RegisterCompany extends AppCompatActivity {
 
                             Log.d(TAG, "Response: " + response.data());
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(RegisterCompany.this);
-                            builder.setMessage("Su empresa ha sido registrada");
-                            AlertDialog alertDialog = builder.create();
 
-
-                            alertDialog.show();
 
                         }
 
@@ -86,13 +79,22 @@ public class RegisterCompany extends AppCompatActivity {
                     });
 
 
+            AlertDialog.Builder builder = new AlertDialog.Builder(RegisterCompany.this);
+            builder.setMessage("Su empresa ha sido registrada");
+            AlertDialog alertDialog = builder.create();
+
+
+            alertDialog.show();
+            /*
             Button btn_reg = (Button) findViewById(R.id.boton_register);
             btn_reg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(RegisterCompany.this,Login.class));
                 }
-            });
+            });*/
+
+
 
 
         });

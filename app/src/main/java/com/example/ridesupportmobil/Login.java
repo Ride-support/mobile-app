@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.apollographql.apollo.ApolloCall;
@@ -37,6 +38,7 @@ public class Login extends AppCompatActivity {
                 // Check which radiobutton was pressed
                 if (checked){
                     loginCompany();
+
                 }
 
             }
@@ -81,7 +83,13 @@ public class Login extends AppCompatActivity {
 
                             Log.d(TAG, "Response: " + response.data().toString());
 
-
+                            Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
+                            btn_ini.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    startActivity(new Intent(Login.this,Map.class));
+                                }
+                            });
 
                         }
 
@@ -112,13 +120,24 @@ public class Login extends AppCompatActivity {
                         public void onResponse(@NotNull Response<AuthCompanyMutation.Data> response) {
 
                             Log.d(TAG, "Response: " + response.data().toString());
+                            Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
+                            btn_ini.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    startActivity(new Intent(Login.this,PerfilCompany.class));
+                                }
+                            });
+
                         }
 
                         @Override
                         public void onFailure(@NotNull ApolloException e) {
                             Log.d(TAG, "Exception " + e.getMessage(), e);
+
+
                         }
                     });
         });
+
     }
 }
