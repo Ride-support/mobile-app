@@ -38,26 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,RegisterService.class));
             }
         });
-
-
-        //Route for login
-        Button btn_login = (Button) findViewById(R.id.boton_iniciar_sesion);
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v2) {
-                startActivity(new Intent(MainActivity.this,RegisterService.class));
-            }
-        });
-
     }
-
-
-
-
-
-
-
 
 }
 

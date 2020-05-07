@@ -3,6 +3,7 @@ package com.example.ridesupportmobil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 public class Login extends AppCompatActivity {
 
     private static final String TAG = "LoginDriver";
-
+    boolean authSuccesful = false;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -30,11 +31,37 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
         RadioButton driverLoginBtt = (RadioButton) findViewById(R.id.driver_login);
 
+        Button btn_reg = (Button) findViewById(R.id.boton_register);
+
         if (driverLoginBtt.isSelected()){
             loginDriver();
+            if(authSuccesful==true) {
+                btn_reg.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(Login.this, RegisterService.class));
+                    }
+                });
+            }
+            authSuccesful=false;
         }else{
             loginCompany();
+
+            if(authSuccesful==true) {
+                btn_reg.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(Login.this, RegisterService.class));
+                    }
+                });
+            }
         }
+
+
+
+
+
+
 
 
     }
@@ -55,8 +82,8 @@ public class Login extends AppCompatActivity {
 
                         @Override
                         public void onResponse(@NotNull Response<AuthDriverMutation.Data> response) {
-
                             Log.d(TAG, "Response: " + response.data().toString());
+                            authSuccesful=true;
                         }
 
                         @Override
@@ -83,8 +110,8 @@ public class Login extends AppCompatActivity {
 
                         @Override
                         public void onResponse(@NotNull Response<AuthCompanyMutation.Data> response) {
-
                             Log.d(TAG, "Response: " + response.data().toString());
+                            authSuccesful=true;
                         }
 
                         @Override
@@ -95,5 +122,12 @@ public class Login extends AppCompatActivity {
         });
 
     }
+
+
+
+
+
+
+
 }
 
