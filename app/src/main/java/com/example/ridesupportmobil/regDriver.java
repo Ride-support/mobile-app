@@ -1,5 +1,6 @@
 package com.example.ridesupportmobil;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.service.autofill.OnClickAction;
@@ -30,6 +31,8 @@ public class regDriver extends AppCompatActivity{
         setContentView(R.layout.register);
 
         createDriver();
+
+
 
     }
 
@@ -77,7 +80,15 @@ public class regDriver extends AppCompatActivity{
 
                             Log.d(TAG, "Exception " + e.getMessage(), e);
                         }
+
                     });
+            AlertDialog.Builder builder = new AlertDialog.Builder(regDriver.this);
+            builder.setMessage("Su registro ha sido exitoso");
+            AlertDialog alertDialog = builder.create();
+
+
+            alertDialog.show();
         });
+
     }
 }
