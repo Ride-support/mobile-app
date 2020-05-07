@@ -37,6 +37,13 @@ public class Login extends AppCompatActivity {
                 // Check which radiobutton was pressed
                 if (checked){
                     loginCompany();
+                    Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
+                    btn_ini.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(Login.this,PerfilCompany.class));
+                        }
+                    });
                 }
 
             }
@@ -112,6 +119,8 @@ public class Login extends AppCompatActivity {
                         public void onResponse(@NotNull Response<AuthCompanyMutation.Data> response) {
 
                             Log.d(TAG, "Response: " + response.data().toString());
+
+
                         }
 
                         @Override
