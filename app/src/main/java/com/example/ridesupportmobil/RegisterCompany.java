@@ -1,7 +1,9 @@
 package com.example.ridesupportmobil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -67,7 +69,12 @@ public class RegisterCompany extends AppCompatActivity {
 
                             Log.d(TAG, "Response: " + response.data());
 
+                            AlertDialog.Builder builder = new AlertDialog.Builder(RegisterCompany.this);
+                            builder.setMessage("Su empresa ha sido registrada");
+                            AlertDialog alertDialog = builder.create();
 
+
+                            alertDialog.show();
 
                         }
 
@@ -77,14 +84,23 @@ public class RegisterCompany extends AppCompatActivity {
                             Log.d(TAG, "Exception " + e.getMessage(), e);
                         }
                     });
-            AlertDialog.Builder builder = new AlertDialog.Builder(RegisterCompany.this);
 
-            builder.setMessage("Su empresa ha sido registrada");
-            AlertDialog alertDialog = builder.create();
 
-            alertDialog.show();
+            Button btn_reg = (Button) findViewById(R.id.boton_register);
+            btn_reg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(RegisterCompany.this,Login.class));
+                }
+            });
+
 
         });
+
+
+
     }
 
 }
+
+

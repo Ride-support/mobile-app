@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#3A65B5"
     android:padding="48dp">
 
     <TextView
@@ -11,7 +12,8 @@
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:text="RIDE SUPPORT"
+        android:text="Login"
+        android:textSize="35dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <RadioGroup
@@ -22,14 +24,20 @@
             android:id="@+id/driver_login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Driver"
-            android:checked="true"/>
+            android:text="Usuario"
+
+
+
+            />
 
         <RadioButton
             android:id="@+id/company_login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Company" />
+            android:text="Empresa"
+
+
+            />
     </RadioGroup>
 
     <EditText
@@ -57,6 +65,8 @@
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
+        android:background="#F14C31"
+
         android:text="Iniciar Sesion" />
 
     <TextView

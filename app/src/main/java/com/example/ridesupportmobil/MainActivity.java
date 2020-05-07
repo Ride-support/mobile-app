@@ -1,23 +1,14 @@
 package com.example.ridesupportmobil;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.OnClickAction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import com.apollographql.apollo.ApolloCall;
-import com.apollographql.apollo.api.Response;
-import com.apollographql.apollo.exception.ApolloException;
-import com.example.ridesupportmobile.DeleteServiceMutation;
-import com.example.ridesupportmobile.GetAllServicesQuery;
-import com.apollographql.apollo.ApolloClient;
-import com.example.ridesupportmobile.RegisterServiceMutation;
-import okhttp3.OkHttpClient;
-import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +25,26 @@ public class MainActivity extends AppCompatActivity {
         btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterCompany.class));
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        builder.setMessage("Desea registrarse como:").setPositiveButton("Usuario", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                startActivity(new Intent(MainActivity.this,regDriver.class));
+            }
+        })
+                .setNegativeButton("Empresa", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        startActivity(new Intent(MainActivity.this,RegisterCompany.class));
+                    }
+                });
+
+        AlertDialog alertDialog = builder.create();
+
+        alertDialog.show();
+
+
             }
         });
 
@@ -47,13 +57,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-
-
-
-
 
 }
 

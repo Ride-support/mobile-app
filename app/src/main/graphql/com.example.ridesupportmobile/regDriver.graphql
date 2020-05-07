@@ -1,0 +1,16 @@
+mutation regDriver($email:String!,$password:String!,$name:String!,$lastname:String!,$age:Int!,$address:String!,$phone:Int!,$vehicle:String!){
+    createDriver(driver: {
+        email: $email
+        password: $password
+        name: $name
+        lastname:$lastname
+        age:$age
+        address: $address
+        phone: $phone
+        vehicle:$vehicle
+    }) {
+        id,
+        email,
+        password
+    }
+}
