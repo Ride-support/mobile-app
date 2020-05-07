@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn_reg = (Button) findViewById(R.id.boton_register);
+
         btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //Route for login
+        Button btn_login = (Button) findViewById(R.id.boton_iniciar_sesion);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+                startActivity(new Intent(MainActivity.this,RegisterService.class));
+            }
+        });
 
     }
 

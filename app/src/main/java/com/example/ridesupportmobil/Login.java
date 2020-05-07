@@ -1,10 +1,12 @@
 package com.example.ridesupportmobil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,10 +18,10 @@ import com.example.ridesupportmobile.AuthDriverMutation;
 
 import org.jetbrains.annotations.NotNull;
 
-public class LoginDriver extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     private static final String TAG = "LoginDriver";
-    private static final String TAG2 = "Company Selected";
+
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -27,12 +29,11 @@ public class LoginDriver extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.login);
         RadioButton driverLoginBtt = (RadioButton) findViewById(R.id.driver_login);
-        RadioButton companyLoginBtt = (RadioButton) findViewById(R.id.company_login);
-        if (driverLoginBtt.isChecked()){
+
+        if (driverLoginBtt.isSelected()){
             loginDriver();
-        }else if(companyLoginBtt.isChecked()){
+        }else{
             loginCompany();
-            Log.d(TAG2,"eureka");
         }
 
 
@@ -92,5 +93,7 @@ public class LoginDriver extends AppCompatActivity {
                         }
                     });
         });
+
     }
 }
+
