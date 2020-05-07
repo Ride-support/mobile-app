@@ -26,7 +26,6 @@ public class RegisterService extends AppCompatActivity {
         setContentView(R.layout.register_service);
 
 
-        //deleteServicesM();
 
         createServicesM();
 
