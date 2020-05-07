@@ -3,97 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:layout_marginTop="45dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="Registrar Compañía"
+            android:text="Registrar empresa"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:padding="40dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="96dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Email:" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Contraseña" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Nombre" />
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Ciudad" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Dirección" />
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Teléfono" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="96dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Encargado" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="286dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+
+                >
 
                 <EditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Correo electrónico"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -101,6 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Contraseña"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -108,6 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Nombre de la empresa"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -115,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Ciudad"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -122,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Dirección"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -129,6 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Teléfono"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -136,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="Administrador"
                     android:inputType="textPersonName" />
                 <Button
                     android:id="@+id/btnCom"
@@ -152,4 +105,3 @@
 
 
 
-</LinearLayout>

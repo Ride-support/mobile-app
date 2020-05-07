@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterService.class));
+                startActivity(new Intent(MainActivity.this,RegisterCompany.class));
             }
         });
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btn_ini.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterCompany.class));
+                startActivity(new Intent(MainActivity.this,Login.class));
             }
         });
 
