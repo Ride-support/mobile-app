@@ -21,43 +21,43 @@ import org.jetbrains.annotations.NotNull;
 public class Login extends AppCompatActivity {
 
     private static final String TAG = "Login";
-    boolean authSuccesful = false;
+
 
     @Override
-    protected void onCreate(Bundle saveInstanceState) {
+    protected void onCreate(Bundle saveInstanceState)  {
 
         super.onCreate(saveInstanceState);
         setContentView(R.layout.login);
-        RadioButton driverLoginBtt = (RadioButton) findViewById(R.id.driver_login);
 
-        Button btn_reg = (Button) findViewById(R.id.boton_register);
+        RadioButton rdb = (RadioButton) findViewById(R.id.company_login);
+        rdb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean checked = ((RadioButton) v).isChecked();
+                // Check which radiobutton was pressed
+                if (checked){
+                    loginCompany();
+                }
 
-        if (driverLoginBtt.isSelected()) {
-            loginDriver();
-            if (authSuccesful == true) {
-                btn_reg.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(Login.this, RegisterService.class));
-                    }
-                });
             }
-            authSuccesful = false;
-        } else {
-            loginCompany();
+        });
 
-            if (authSuccesful == true) {
-                btn_reg.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(Login.this, RegisterService.class));
-                    }
-                });
+        RadioButton dri = (RadioButton) findViewById(R.id.driver_login);
+        dri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+                boolean checked = ((RadioButton) v2).isChecked();
+                // Check which radiobutton was pressed
+                if (checked){
+
+                    loginDriver();
+                }
+
             }
-            authSuccesful = false;
-        }
+        });
+
+
     }
-
 
 
         private void loginDriver(){

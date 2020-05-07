@@ -1,76 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="3dp"
-    >
-
-    <EditText
-        android:id="@+id/input_nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="Nombres"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/input_apellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/input_nombre"
-        android:ems="10"
-        android:hint="Apellidos"
-        android:inputType="textPersonName" />
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/texto_estado_civil"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Registrar Usuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+        android:id="@+id/userEmail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/input_apellido"
-        android:layout_marginRight="48dp"
-        android:paddingBottom="8dp"
-        android:paddingTop="16dp"
-        android:text="Estado civil"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textPersonName" />
 
-    <Spinner
-        android:id="@+id/spinner_estado_civil"
-        android:layout_width="wrap_content"
+        <EditText
+        android:id="@+id/userContrasena"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/texto_estado_civil"
-        android:layout_toLeftOf="@+id/spinner_cargo"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:password="true"
+        android:inputType="textPersonName" />
 
-        />
-
-    <TextView
-        android:id="@+id/texto_cargo"
-        android:layout_width="wrap_content"
+        <EditText
+        android:id="@+id/userNombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/input_apellido"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@+id/texto_estado_civil"
-        android:paddingBottom="8dp"
-        android:paddingTop="16dp"
-        android:text="Cargo"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName" />
 
-    <Spinner
-        android:id="@+id/spinner_cargo"
-        android:layout_width="wrap_content"
+        <EditText
+        android:id="@+id/userApellido"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/texto_cargo"
-        android:layout_alignParentRight="true"
-        android:layout_alignStart="@+id/texto_cargo"
-        android:layout_below="@+id/texto_cargo"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName" />
 
-    />
+         <EditText
+        android:id="@+id/userEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="textPersonName" />
 
-</RelativeLayout>
+         <EditText
+        android:id="@+id/userDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Dirección"
+        android:inputType="textPersonName" />
+
+         <EditText
+        android:id="@+id/userTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Teléfono/Celular"
+        android:inputType="textPersonName" />
+
+         <EditText
+        android:id="@+id/userVehiculo"
+        android:layout_width="match_parent"
+        android:hint="Tipo de vehículo"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+
+        <Button
+            android:id="@+id/userGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="#D13232"
+            android:text="Registar" />
+    </LinearLayout>
+
+
+</LinearLayout>
