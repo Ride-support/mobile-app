@@ -3,18 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#3A65B5"
+    android:background="@drawable/bckg"
     android:padding="48dp">
 
-    <TextView
-        android:id="@+id/texto_conectar"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:text="Login"
-        android:textSize="35dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -25,6 +17,14 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Usuario"
+            android:textSize="24dp"
+            android:layout_weight="0.7"
+            android:background="#000000"
+            android:textColor="#F8F5F5"
+            android:textColorHint="#A6A1B1"
+            android:alpha="0.7"
+
+            android:buttonTint="@color/colorAccent"
 
 
 
@@ -32,9 +32,16 @@
 
         <RadioButton
             android:id="@+id/company_login"
-            android:layout_width="150dp"
+            android:layout_width="166dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:alpha="0.7"
+            android:background="#000000"
             android:text="Empresa"
+            android:textColor="#F8F5F5"
+            android:textColorHint="#A6A1B1"
+            android:textSize="24dp"
+            android:buttonTint="@color/colorAccent"
 
 
             />
@@ -45,7 +52,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
+        android:background="#000000"
+        android:textColor="#F8F5F5"
+        android:textColorHint="#A6A1B1"
+        android:alpha="0.7"
+
         android:hint="Correo" />
 
     <EditText
@@ -53,10 +65,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
+        android:background="#000000"
+        android:textColor="#F8F5F5"
+        android:textColorHint="#A6A1B1"
         android:ems="10"
         android:hint="Contraseña"
-        android:inputType="textPassword" />
+
+        android:inputType="textPassword"
+        android:alpha="0.7"
+        />
 
     <Button
         android:id="@+id/boton_iniciar_sesion"
@@ -64,9 +82,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:background="#F14C31"
-
+        android:layout_weight="0.7"
+        android:background="#1A1832"
+        android:layout_marginTop="18dp"
+        android:alpha="0.9"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
         android:text="Iniciar Sesion" />
 
     <TextView
@@ -78,6 +99,6 @@
         android:gravity="center_vertical"
         android:text="¿Olvidaste tu constraseña?"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0E8AEE" />
+        android:textColor="#00F8C6" />
 
 </LinearLayout>

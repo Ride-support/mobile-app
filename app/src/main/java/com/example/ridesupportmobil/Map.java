@@ -9,9 +9,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.MapStyleOptions;
+
 
 public class Map extends FragmentActivity implements OnMapReadyCallback {
 
+    private static final String TAG = Map.class.getSimpleName();
     private GoogleMap mMap;
 
     @Override
@@ -27,9 +30,15 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney, Australia, and move the camera.
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng bogota = new LatLng(4.637072,-74.085810);
+        mMap.addMarker(new MarkerOptions().position(bogota).title("Bogotá"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));
+        mMap.setTrafficEnabled(true);
+        mMap.setMinZoomPreference(13);
+
+        boolean success = googleMap.setMapStyle(new MapStyleOptions(getResources()
+                .getString(R.string.style_json)));
+
+
     }
 }

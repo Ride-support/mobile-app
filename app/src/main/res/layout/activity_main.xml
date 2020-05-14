@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/city"
+    android:background="@drawable/bg"
     android:orientation="vertical"
+
     >
 
 
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/logo"
-        />
-
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Iniciar sesión"
         android:id="@+id/boton_login"
-        android:background= "#7DF12C"
-        android:layout_marginTop="35dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textSize="24dp"/>
-    <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Registrarse"
-        android:id="@+id/boton_register"
-        android:background= "#CF3232"
-        android:textSize="24dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="380dp"
+        android:background="#A4B2F8"
+        android:alpha="0.8"
         android:fontFamily="sans-serif-condensed-medium"
-        />
+        android:text="Iniciar sesión"
+        android:textSize="24dp" />
 
-
-
+    <Button
+        android:id="@+id/boton_register"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:alpha="0.8"
+        android:background="#06162E"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#E2DFE8"
+        android:text="Registrarse"
+        android:textSize="24dp" />
 
 
 </LinearLayout>
