@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bckg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Selecciona el servicio que buscas"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:textColor="#B4B5DD"
+            android:alpha="0.8"
+
+            />
+
+
+        <ImageButton
+            android:id="@+id/boton_parqueadero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:src="@drawable/parking"
+            android:layout_gravity="center"
+            android:background="#A4B2F8"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Parqueadero"
+            android:textSize="24dp" />
+
+
+        <ImageButton
+        android:id="@+id/boton_taller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+
+            android:layout_gravity="center"
+        android:background="#A4B2F8"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Lavado"
+        android:src="@drawable/taller"
+        android:textSize="24dp" />
+
+        <ImageButton
+            android:id="@+id/boton_lavado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:background="#A4B2F8"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Lavado"
+            android:src="@drawable/lavado"
+            android:layout_gravity="center"
+
+            android:textSize="24dp" />
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

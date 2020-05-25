@@ -52,8 +52,8 @@ type Insertion {
 type Mutation {
     createCar(car: CarInput!): Car!
     createCardinal(cardinal: CardinalInput!): Insertion!
-    createCompany(company: CompanyInput!): Company!
-    createDriver(driver: DriverInput!): Driver!
+    createCompany(company: CompanyInput!): ResponseCompany!
+    createDriver(driver: DriverInput!): ResponseDriver!
     createReserva(id: String!, reserva: ReservaInput!): Reserva!
     createService(service: ServiceInputGS!): ServiceGS!
     createServiceM(service: ServiceInput!): Response!
@@ -71,8 +71,8 @@ type Mutation {
     deleteUser(id: String!): String
     deleteVehicle(id: Int!): Int
     deleteVehicleType(id: Int!): Int
-    loginCompany(company: CompanyLogin!): String!
-    loginDriver(driver: DriverLogin!): String!
+    loginCompany(company: CompanyLogin!): ResponseCompany!
+    loginDriver(driver: DriverLogin!): ResponseDriver!
     updateCar(car: CarInput!, plateNumber: String!): Car!
     updateCompany(company: CompanyInput!, id: Int!): Company!
     updateDriver(driver: DriverInput!, id: Int!): Driver!
@@ -123,6 +123,20 @@ type Reserva {
 
 type Response {
     Mensaje: String
+}
+
+type ResponseCompany {
+    company: Company!
+    error: String!
+    message: String!
+    token: String!
+}
+
+type ResponseDriver {
+    driver: Driver!
+    error: String!
+    message: String!
+    token: String!
 }
 
 type Service {
