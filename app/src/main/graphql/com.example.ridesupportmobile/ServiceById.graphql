@@ -1,0 +1,10 @@
+query ServiceById($service_id:Int!){
+    serviceByIdM(id: $service_id){
+        Name
+        Location
+        Idcompany
+        Prices
+        Service
+        Shedule
+    }
+}

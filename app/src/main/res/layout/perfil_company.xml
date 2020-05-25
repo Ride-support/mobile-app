@@ -5,8 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PerfilCompany"
+    android:orientation="vertical"
     android:background="@drawable/bckg"
     >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/namequery"
+        android:text="Nombre: "
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        />
 
 
     <Button
@@ -14,6 +23,16 @@
         android:layout_height="wrap_content"
         android:text="Registrar servicio"
         android:id="@+id/btn_reg"
+        android:background="#C4E32C2C"
+        android:layout_marginTop="50dp"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="veeeeer"
+        android:id="@+id/querybt"
         android:background="#C4E32C2C"
         android:layout_marginTop="50dp"
         />
