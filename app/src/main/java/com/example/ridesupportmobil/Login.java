@@ -1,5 +1,6 @@
 package com.example.ridesupportmobil;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,8 @@ import org.jetbrains.annotations.NotNull;
 public class Login extends AppCompatActivity {
 
     private static final String TAG = "Login";
+    private TextView textBox;
+    public String token_c;
 
 
     @Override
@@ -31,6 +35,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
 
         RadioButton rdb = (RadioButton) findViewById(R.id.company_login);
+        textBox = (TextView) findViewById(R.id.incorrect);
+
         rdb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,21 +87,27 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onResponse(@NotNull Response<AuthDriverMutation.Data> response) {
 
-                            Log.d(TAG, "Response: " + response.data().toString());
-
-                            Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
-                            btn_ini.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    startActivity(new Intent(Login.this,Map.class));
+                            Log.d(TAG, "Response: " + response.data());
+                                if(response.data() == null) {
+                                    //Log.d(TAG, "Response: " + response.data().toString());
+                                    textBox.setText("Usuario/contraseña incorrectos");
+                                }else {
+                                    Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
+                                    btn_ini.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            startActivity(new Intent(Login.this, Map.class));
+                                        }
+                                    });
                                 }
-                            });
+
 
                         }
 
                         @Override
                         public void onFailure(@NotNull ApolloException e) {
                             Log.d(TAG, "Exception " + e.getMessage(), e);
+
                         }
                     });
         });
@@ -119,14 +131,24 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onResponse(@NotNull Response<AuthCompanyMutation.Data> response) {
 
-                            Log.d(TAG, "Response: " + response.data().toString());
-                            Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
-                            btn_ini.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    startActivity(new Intent(Login.this,PerfilCompany.class));
-                                }
-                            });
+
+                            Log.d(TAG, "Response: " + response.data());
+                            if(response.data() == null) {
+                                //Log.d(TAG, "Response: " + response.data().toString());
+                                textBox.setText("Usuario/contraseña incorrectos");
+                            }else {
+                                Button btn_ini = (Button) findViewById(R.id.boton_iniciar_sesion);
+
+                                token_c= response.data().loginCompany().token();
+
+                                btn_ini.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        startActivity(new Intent(Login.this, PerfilCompany.class));
+                                    }
+                                });
+                            }
+
 
                         }
 

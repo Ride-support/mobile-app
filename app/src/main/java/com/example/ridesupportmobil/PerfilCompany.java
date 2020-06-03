@@ -32,8 +32,17 @@ import java.util.jar.Attributes;
 public class PerfilCompany extends AppCompatActivity {
 
     private final String TAG = "PerfilCompany";
-    private TextView textBox;
+    private TextView na;
+    private TextView add;
+    private TextView em;
+    private TextView ciudad;
+    private TextView pho;
+    private TextView man;
+
+
+
     private Button queryButton;
+
 
 
     @Override
@@ -41,7 +50,12 @@ public class PerfilCompany extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perfil_company);
 
-        textBox = (TextView) findViewById(R.id.namequery);
+        na = (TextView) findViewById(R.id.namequery);
+        add = (TextView) findViewById(R.id.dirquery);
+        em = (TextView) findViewById(R.id.emailquery);
+        ciudad = (TextView) findViewById(R.id.cityquery);
+        pho = (TextView) findViewById(R.id.phonequery);
+        man = (TextView) findViewById(R.id.managerquery);
         queryButton = (Button) findViewById(R.id.querybt);
 
         Button btn_ini = (Button) findViewById(R.id.btn_reg);
@@ -71,7 +85,14 @@ public class PerfilCompany extends AppCompatActivity {
 
                             Log.d(TAG, "Response: "+ response.data().toString());
 
-                            textBox.setText(response.data().serviceByIdM().Name());
+                            na.setText("Nombre:  Car company");
+                            add.setText("Dirección:  Carrera 5 #22a -56");
+                            em.setText("Email:  empresa@gmail.com");
+                            ciudad.setText("Ciudad:  Bogotá");
+                            man.setText("Administrador:  Juan Perez");
+                            pho.setText("Teléfono:  3193108929");
+
+
 
 
                         }

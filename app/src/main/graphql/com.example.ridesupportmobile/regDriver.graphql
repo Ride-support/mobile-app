@@ -9,8 +9,10 @@ mutation regDriver($email:String!,$password:String!,$name:String!,$lastname:Stri
         phone: $phone
         vehicle:$vehicle
     }) {
-        id,
-        email,
-        password
+
+        token
+
     }
 }
+
+

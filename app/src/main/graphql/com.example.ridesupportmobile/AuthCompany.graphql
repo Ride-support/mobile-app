@@ -1,6 +1,9 @@
 mutation AuthCompany($company_email:String!,$company_password:String!){
     loginCompany(company: {
-        email:$company_email,
-        password:$company_password,
-    })
+        email:$company_email
+        password:$company_password
+    }){
+        token
+    }
 }
+

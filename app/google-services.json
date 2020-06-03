@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "93473853918",
+    "firebase_url": "https://notifyrs-69c9b.firebaseio.com",
+    "project_id": "notifyrs-69c9b",
+    "storage_bucket": "notifyrs-69c9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93473853918:android:14005f25c4378f562c4d4f",
+        "android_client_info": {
+          "package_name": "com.example.ridesupportmobil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93473853918-2lvumcidbjfa4i14lld7fmif2n2i5avl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUhstJBBsUGYm-npMsLID5dtDl6l4geDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93473853918-2lvumcidbjfa4i14lld7fmif2n2i5avl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

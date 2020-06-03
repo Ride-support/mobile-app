@@ -1,6 +1,8 @@
 mutation AuthDriver($driver_email:String!,$driver_password:String!){
     loginDriver(driver:{
-        email:$driver_email,
-        password:$driver_password,
-    })
+        email:$driver_email
+        password:$driver_password
+    }){
+        token
+    }
 }

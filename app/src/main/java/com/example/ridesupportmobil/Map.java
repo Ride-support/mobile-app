@@ -31,7 +31,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         LatLng bogota = new LatLng(4.637072,-74.085810);
-        mMap.addMarker(new MarkerOptions().position(bogota).title("Bogotá"));
+        mMap.addMarker(new MarkerOptions().position(bogota).title("Bogota"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));
         mMap.setTrafficEnabled(true);
         mMap.setMinZoomPreference(13);
