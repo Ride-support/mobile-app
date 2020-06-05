@@ -83,7 +83,10 @@ public class PerfilCompany extends AppCompatActivity {
                         public void onResponse(@NotNull Response<ServiceByIdQuery.Data> response) {
 
 
+                            //textBox.setText(response.data().serviceByIdM().Name());
+
                             Log.d(TAG, "Response: "+ response.data().toString());
+
 
                             na.setText("Nombre:  Car company");
                             add.setText("Dirección:  Carrera 5 #22a -56");
